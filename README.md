@@ -1,2 +1,2 @@
 # amuni.cafe
-Simple one page website for Amunì cafe
+Dead simple one page website for Amunì cafe
