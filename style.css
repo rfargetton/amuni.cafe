@@ -102,7 +102,10 @@ header h1 {
 header {
   position: relative;
   text-align: center;
-  padding: 3rem 0;
+  padding: 1rem 0;
+  @media screen and (min-width: 768px) {
+    padding: 3rem 0;
+  }
 }
 header h1 svg {
   width: 100%;
@@ -124,7 +127,11 @@ ul {
 .header-nav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
   a {
     text-decoration: none;
     background-color: var(--bg-color);
@@ -151,18 +158,17 @@ ul {
 .fraunces-base {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
   font-variation-settings:
-    "SOFT" 100,
+    "SOFT" 60,
     "WONK" 0;
 }
 .fraunces-title {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
   font-style: italic;
   font-variation-settings:
+    "wght" 700,
     "SOFT" 100,
     "WONK" 1;
 }
@@ -185,9 +191,11 @@ ul {
 
 section {
   font-size: 1.2rem;
+  position: relative;
+  text-align: center;
 }
 section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: .5em 0;
   line-height: 1;
   text-wrap: pretty;
@@ -300,4 +308,30 @@ section p {
   --bg-color: var(--yellow);
   --text-color: var(--dark-green);
   --title-color: var(--dark-green);
+}
+
+.sticker {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: .5em;
+  font-size: 1.2rem;
+  font-style: italic;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  max-width: 10ch
+}
+
+#brunch {
+  position: relative;
+  margin: 1rem auto;
+  transform:  rotate(3deg);
+  @media screen and (min-width: 768px) {
+    margin: 0 ;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
