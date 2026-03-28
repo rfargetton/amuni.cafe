@@ -1,6 +1,6 @@
 
 :root{
-  --container-max-w: 680px;
+  --container-max-w: 640px;
   --container-px: calc(var(--container-max-w) / 24);
   --orange: #F15628;
   --dark-green: #515839;
